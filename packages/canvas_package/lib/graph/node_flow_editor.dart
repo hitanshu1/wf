@@ -444,12 +444,12 @@ class _NodeFlowEditorState<T> extends State<NodeFlowEditor<T>>
               child: Stack(
                 children: [
                   _buildCanvas(constraints, theme),
-                  MinimapOverlay<T>(
-                    controller: widget.controller,
-                    theme: theme,
-                    transformationController: _transformationController,
-                    canvasSize: constraints.biggest,
-                  ),
+                  // MinimapOverlay<T>(
+                  //   controller: widget.controller,
+                  //   theme: theme,
+                  //   transformationController: _transformationController,
+                  //   canvasSize: constraints.biggest,
+                  // ),
                 ],
               ),
             ),

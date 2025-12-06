@@ -1,11 +1,13 @@
-import 'dart:io';
-
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart' show CacheManager, Config;
 import 'package:flutter_svg/svg.dart';
 
 import '../utils/app_logs.dart';
+
+// Conditional import for File - only available on non-web platforms
+import 'dart:io' if (dart.library.html) 'file_stub.dart' show File;
 
 class AppImage extends StatelessWidget {
   final EdgeInsets margin;
@@ -134,8 +136,35 @@ class AppImage extends StatelessWidget {
   }
 
   Widget _fileImage() {
+    // Image.file is not supported on web
+    if (kIsWeb) {
+      // On web, try to convert file path to asset path or show placeholder
+      // If the path looks like it might be an asset, try that first
+      if (imageUrl != null && imageUrl!.isNotEmpty) {
+        // Try to treat it as an asset path
+        if (imageUrl!.startsWith('assets/') || !imageUrl!.contains('/')) {
+          return _assetImage();
+        }
+      }
+      return _placeholderImage();
+    }
+    
+    // Only use File when not on web - this code path is guarded by kIsWeb check above
+    // We know we're on a non-web platform here, so File is dart:io.File
+    return _createFileImage(imageUrl ?? "");
+  }
+
+  // Helper method to create Image.file with proper typing
+  // This method is only called when kIsWeb is false, so File is guaranteed to be dart:io.File
+  // The dynamic cast is necessary because conditional imports create type ambiguity,
+  // but at runtime this is always dart:io.File on non-web platforms
+  Widget _createFileImage(String path) {
+    // ignore: avoid_web_libraries_in_flutter
+    final file = File(path);
+    // Cast to dynamic to bypass type checking - we know this is dart:io.File at runtime
+    // ignore: avoid_web_libraries_in_flutter
     return Image.file(
-      File(imageUrl ?? ""),
+      file as dynamic,
       width: width,
       height: height,
       fit: fit,

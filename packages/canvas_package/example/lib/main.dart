@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
             "y": 100,
             "height": 170,
             "width": 250,
-            "children": []
+            "children": null
           },
         ]
       },

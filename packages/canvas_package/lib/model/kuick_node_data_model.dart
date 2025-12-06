@@ -88,9 +88,10 @@ class KuickNode<T> {
         y: json["y"],
         height: json["height"],
         width: json["width"],
-        children: json["children"] == null
+        children: json["children"] == null || 
+            (json["children"] is List && (json["children"] as List).isEmpty)
             ? null
-            : NodeOutputPosition.fromJson(json["children"]),
+            : NodeOutputPosition.fromJson(json["children"] as Map<String, dynamic>),
       );
 
   Map<String, dynamic> toJson(dynamic Function(T value) toJsonT) => {
