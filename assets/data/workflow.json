@@ -1,0 +1,313 @@
+{
+  "workflowMenu": [
+    {
+      "parent": "Triggers",
+      "children": [
+        {
+          "id": "1541651615",
+          "pageId": "1515",
+          "title": "Chat Message",
+          "subtitle": "When Received",
+          "icon": "assets/svg/messages.svg",
+          "trigger": "on chat",
+          "color": "#F1A33C",
+          "shape": "chatBubble",
+          "height": 150,
+          "width": 150,
+          "nodeUI": {
+            "label": "Chat Message",
+            "description": "When Received",
+            "bgColor": "#1E1E1E",
+            "textColor": "#FFFFFF",
+            "borderRadius": 12
+          },
+          "plusPositions": {
+            "top": [],
+            "bottom": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              }
+            ],
+            "left": [],
+            "right": []
+          }
+        }
+      ]
+    },
+    {
+      "parent": "Actions",
+      "children": [
+        {
+          "id": "9879822234",
+          "pageId": "9834",
+          "title": "AI Agent",
+          "subtitle": "Process with AI",
+          "icon": "assets/svg/ai-assistant.svg",
+          "color": "#5678FF",
+          "trigger": "on agent call",
+          "shape": "hexagonHorizontal",
+          "height": 140,
+          "width": 180,
+          "nodeUI": {
+            "label": "AI Agent",
+            "description": "Process with AI",
+            "bgColor": "#1E1E1E",
+            "textColor": "#FFFFFF",
+            "borderRadius": 12
+          },
+          "plusPositions": {
+            "top": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              }
+            ],
+            "bottom": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              }
+            ],
+            "left": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              }
+            ],
+            "right": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              }
+            ]
+          }
+        },
+        {
+          "id": "5621324148",
+          "pageId": "5648",
+          "title": "HTTP Request",
+          "subtitle": "Call API",
+          "icon": "assets/svg/http.svg",
+          "color": "#4DBFFF",
+          "trigger": "on http call",
+          "shape": "rectangle",
+          "height": 160,
+          "width": 240,
+          "nodeUI": {
+            "label": "HTTP Request",
+            "description": "Call API",
+            "bgColor": "#1E1E1E",
+            "textColor": "#FFFFFF",
+            "borderRadius": 12
+          },
+          "plusPositions": {
+            "top": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              }
+            ],
+            "bottom": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              }
+            ],
+            "left": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              }
+            ],
+            "right": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              }
+            ]
+          }
+        },
+        {
+          "id": "78678687678",
+          "pageId": "7868",
+          "title": "Database",
+          "subtitle": "Store Data",
+          "icon": "assets/svg/cloud-data.svg",
+          "color": "#41C88A",
+          "trigger": "on data fetch",
+          "shape": "hexagonVertical",
+          "height": 180,
+          "width": 140,
+          "nodeUI": {
+            "label": "Database",
+            "description": "Store Data",
+            "bgColor": "#1E1E1E",
+            "textColor": "#FFFFFF",
+            "borderRadius": 12
+          },
+          "plusPositions": {
+            "top": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              }
+            ],
+            "bottom": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              }
+            ],
+            "left": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              }
+            ],
+            "right": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              }
+            ]
+          }
+        },
+        {
+          "id": "8764589686",
+          "pageId": "8764",
+          "title": "Email",
+          "subtitle": "Send Email",
+          "icon": "assets/svg/email.svg",
+          "color": "#D36AFF",
+          "trigger": "on email send",
+          "shape": "circle",
+          "height": 150,
+          "width": 150,
+          "nodeUI": {
+            "label": "Email",
+            "description": "Send Email",
+            "bgColor": "#1E1E1E",
+            "textColor": "#FFFFFF",
+            "borderRadius": 12
+          },
+          "plusPositions": {
+            "top": [],
+            "bottom": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              }
+            ],
+            "left": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              }
+            ],
+            "right": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "parent": "Logic",
+      "children": [
+        {
+          "id": "678645868678",
+          "pageId": "6788",
+          "title": "Condition",
+          "subtitle": "If/Else logic",
+          "icon": "assets/svg/condition.svg",
+          "color": "#FFA54D",
+          "trigger": "on condition call",
+          "shape": "rectangle",
+          "height": 160,
+          "width": 240,
+          "nodeUI": {
+            "label": "Condition",
+            "description": "If/Else logic",
+            "bgColor": "#1E1E1E",
+            "textColor": "#FFFFFF",
+            "borderRadius": 12
+          },
+          "plusPositions": {
+            "top": [],
+            "bottom": [
+              {
+                "id": "01",
+                "templateType": "plus_icon"
+              },
+              {
+                "id": "02",
+                "templateType": "plus_icon"
+              }
+            ],
+            "left": [],
+            "right": []
+          }
+        }
+      ]
+    },
+    {
+      "parent": "End States",
+      "children": [
+        {
+          "id": "7865486854",
+          "pageId": "7865",
+          "title": "Success",
+          "subtitle": "Workflow Complete",
+          "icon": "assets/svg/success.svg",
+          "color": "#59CC7A",
+          "trigger": "on success",
+          "shape": "circle",
+          "height": 150,
+          "width": 150,
+          "nodeUI": {
+            "label": "Success",
+            "description": "Workflow Complete",
+            "bgColor": "#1E1E1E",
+            "textColor": "#FFFFFF",
+            "borderRadius": 12
+          },
+          "plusPositions": {
+            "top": [],
+            "bottom": [],
+            "left": [],
+            "right": []
+          }
+        },
+        {
+          "id": "546387148678",
+          "pageId": "5463",
+          "title": "Failure",
+          "subtitle": "Error Handling",
+          "icon": "assets/svg/error.svg",
+          "color": "#FF4F4F",
+          "trigger": "on error",
+          "shape": "diamond",
+          "height": 140,
+          "width": 180,
+          "nodeUI": {
+            "label": "Failure",
+            "description": "Error Handling",
+            "bgColor": "#1E1E1E",
+            "textColor": "#FFFFFF",
+            "borderRadius": 12
+          },
+          "plusPositions": {
+            "top": [],
+            "bottom": [],
+            "left": [],
+            "right": []
+          }
+        }
+      ]
+    }
+  ]
+}

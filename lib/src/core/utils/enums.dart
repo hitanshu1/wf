@@ -1,0 +1,1 @@
+enum PlusButtonPosition { top, bottom, left, right }
